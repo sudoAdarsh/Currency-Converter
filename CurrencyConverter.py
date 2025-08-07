@@ -1,5 +1,13 @@
 import requests
 
+# Taking user input for Source and Target country's Currency.
+
+from_currency = input("Enter source currency: ").strip().lower()
+to_currency = input("Enter target currency: ").strip().lower()
+
+# Taking user input for the amount to be converted.
+# Checking if the amount is a valid positive number.
+
 def getinput():
     while True:
         try:
@@ -11,8 +19,7 @@ def getinput():
         except ValueError:
             print("Enter a valid number.")
 
-from_currency = input("Enter source currency: ").strip().lower()
-to_currency = input("Enter target currency: ").strip().lower()
+# Converting the Currency using API.
 
 def convert_currency(amount, from_currency, to_currency):
     api_data = requests.get(f"https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/{from_currency}.json")
