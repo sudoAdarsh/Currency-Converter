@@ -1,4 +1,5 @@
 # Currency-Converter
 
 A simple Currency Converter using Python.  
-Still in CLI phase.
+API used: `https://github.com/fawazahmed0/exchange-api.git`  
+Other requirements: used `requests` library.
